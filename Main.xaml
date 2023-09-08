@@ -102,7 +102,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Collecting information from the user" sap:VirtualizedContainerService.HintSize="529.6,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please enter your name and email address(es)">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Collecting information from the user" sap:VirtualizedContainerService.HintSize="529.6,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="[&quot;Please enter your name and email address in the format below&quot;+&#xD;&#xA;&quot;&#xD;&#xA;My name is is John Does and my email address is xyz@domain.com&quot;]">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[userInput]</OutArgument>
       </ui:InputDialog.Result>
@@ -136,7 +136,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Subject="{x:Null}" Account="[Gmail]" Body="[&quot;Hello &quot; +userName+ &quot;,&quot;+&#xD;&#xA;&quot;&#xD;&#xA;We have successfully received your email ID&quot;+&#xD;&#xA;&quot;&#xD;&#xA;Regards,&quot;+&#xD;&#xA;&quot;&#xD;&#xA;RPA Team&quot;]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,468" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" To="[userEmail]" UseDocumentAsBody="False">
+            <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Subject="{x:Null}" Account="[Gmail]" Body="[&quot;Hello &quot; +userName+ &quot;,&quot;+&#xD;&#xA;&quot;&#xD;&#xA;We have successfully received your email ID.&quot;+&#xD;&#xA;&quot;&#xD;&#xA;Regards,&quot;+&#xD;&#xA;&quot;&#xD;&#xA;RPA Team&quot;]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,468" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" To="[userEmail]" UseDocumentAsBody="False">
               <umab:SendMailX.Files>
                 <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
               </umab:SendMailX.Files>
