@@ -109,7 +109,7 @@
       </ui:InputDialog.Result>
     </ui:InputDialog>
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Extracting email address from their input via a Regex" sap:VirtualizedContainerService.HintSize="529.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[System.Text.RegularExpressions.Regex.Match(userInput,&quot;(?&lt;=)\S+(?=)@\S+&quot;).ToString]" />
-    <Assign sap:VirtualizedContainerService.HintSize="529.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="Using regex to extract email address" sap:VirtualizedContainerService.HintSize="529.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[userEmail]</OutArgument>
       </Assign.To>
@@ -117,7 +117,7 @@
         <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(userInput,"(?&lt;=)\S+(?=)@\S+").ToString]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="529.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign DisplayName="Extracting user ID from the email address" sap:VirtualizedContainerService.HintSize="529.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[userName]</OutArgument>
       </Assign.To>
@@ -131,7 +131,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,580" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Sending an email to the obtained email address" sap:VirtualizedContainerService.HintSize="496,580" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
